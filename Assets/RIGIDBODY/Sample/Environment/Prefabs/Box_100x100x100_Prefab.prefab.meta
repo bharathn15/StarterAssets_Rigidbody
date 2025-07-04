@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 248a0752da400da45a9ee0913fe85203
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 267961
+  packageName: 'Starter Assets: Character Controllers | URP'
+  packageVersion: 2.0.2
+  assetPath: Assets/Starter Assets/Sample/Environment/Prefabs/Box_100x100x100_Prefab.prefab
+  uploadId: 721456

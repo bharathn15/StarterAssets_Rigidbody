@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a47ef4d607e6c674d8e09ff00c95c936
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 267961
+  packageName: 'Starter Assets: Character Controllers | URP'
+  packageVersion: 2.0.2
+  assetPath: Assets/Starter Assets/Sample/Environment/Prefabs/Stairs_200x100x200_Prefab.prefab
+  uploadId: 721456

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 6727e9bbfd4cd2143bb803b06544fb97
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 267961
+  packageName: 'Starter Assets: Character Controllers | URP'
+  packageVersion: 2.0.2
+  assetPath: Assets/Starter Assets/Sample/Environment/Shaders/Built-in_RP/Triplanar.shader
+  uploadId: 721456
