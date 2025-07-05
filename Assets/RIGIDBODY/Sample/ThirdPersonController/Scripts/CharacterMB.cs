@@ -4,7 +4,10 @@ public class CharacterMB : MonoBehaviour
 {
     [field: SerializeField] public Rigidbody m_Rigidbody;
 
-    public CharacterInput characterInput;
+    
+    
+    // public CharacterInput characterInput;
+
 
     public CharacterMB()
     {

@@ -1,5 +1,12 @@
+using System;
 using Unity.VisualScripting;
 using UnityEngine;
+
+[Serializable]
+public struct PlayerData
+{
+    public Vector2 Position;
+}
 
 public class CharacterInput : MonoBehaviour
 {
@@ -22,9 +29,15 @@ public class CharacterInput : MonoBehaviour
 
     void Start()
     {
-        
+#if UNITY_EDITOR
+        Cursor.lockState = CursorLockMode.Confined;
+#endif
     }
 
     public Vector2 Move() => inputSystem.Player.Move.ReadValue<Vector2>();
+
+#if UNITY_EDITOR
+    public Vector2 MouseMove() => new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
+#endif
 
 }
