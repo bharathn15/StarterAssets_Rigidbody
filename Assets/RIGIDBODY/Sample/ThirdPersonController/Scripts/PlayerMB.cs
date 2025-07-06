@@ -1,4 +1,6 @@
+using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEngine.LightAnchor;
 
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMB : CharacterMB
@@ -23,10 +25,36 @@ public class PlayerMB : CharacterMB
         {
             m_MoveSpeed = 0;
         }
+        mouseX = CharacterInputData.MouseMove().x;
     }
 
+    float mouseX;
+    float targetRotation;
+    [Tooltip("How fast the character turns to face movement direction")]
+    [Range(0.0f, 1f)]
+    public float RotationSmoothTime = 0.12f;
+    [Range(0.0f, 1f)]
+    public float rotationThreshold = 0.05f;
+    private float rotationVelocity;
+    private float lastTargetRotation;
     private void FixedUpdate()
     {
+        if (CharacterInputData.MouseMove().sqrMagnitude > rotationThreshold)
+        {
+            lastTargetRotation = Mathf.Atan2(CharacterInputData.MouseMove().x, CharacterInputData.MouseMove().y) * Mathf.Rad2Deg +
+                                 Camera.main.transform.eulerAngles.y;
+        }
+        // Smoothly rotate towards the last valid target rotation
+        float rotation = Mathf.SmoothDampAngle(
+            transform.eulerAngles.y,
+            lastTargetRotation,
+            ref rotationVelocity,
+            RotationSmoothTime
+        );
+
+        // Apply rotation
+        base.m_Rigidbody.transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);
+
         // Movement.
         if (CharacterInputData.Move() == Vector2.zero && m_GroundCheck == false)
             return;

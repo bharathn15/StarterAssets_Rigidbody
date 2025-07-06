@@ -1687,6 +1687,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86fb71f885d9d7e469a7b07367267440, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MousePos: {x: 0, y: 0}
 --- !u!4 &861491216
 Transform:
   m_ObjectHideFlags: 0
@@ -8285,9 +8286,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Rigidbody: {fileID: 4838517312194086026}
   m_MoveSpeed: 5
-  m_Torque: 10
+  m_RotateSpeed: 4
   m_GroundCheck: {fileID: 6579371026990776708}
   CharacterInputData: {fileID: 861491215}
+  RotationSmoothTime: 0.4
+  rotationThreshold: 0.25
 --- !u!114 &6579371026990776708
 MonoBehaviour:
   m_ObjectHideFlags: 0
